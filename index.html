@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vortex Project</title>
+  <style>
+    /* Reset e base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #000;
+      color: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2 {
+      color: #007bff;
+    }
+
+    h1 {
+      font-size: 3em;
+      text-align: center;
+      margin-top: 20px;
+      font-family: 'Verdana', sans-serif;
+    }
+
+    p {
+      color: #ccc;
+    }
+
+    /* Menu lateral */
+    .menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 100%;
+      background-color: #111;
+      padding: 20px;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.8);
+    }
+
+    .menu h2 {
+      color: #007bff;
+      margin-bottom: 20px;
+    }
+
+    .menu a {
+      display: block;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: #222;
+      border-radius: 5px;
+      text-align: center;
+      transition: 0.3s;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .menu a:hover {
+      background-color: #007bff;
+      color: #fff;
+    }
+
+    /* Conteúdo principal */
+    main {
+      margin-left: 220px;
+      padding: 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+      padding: 20px;
+      background-color: #111;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    }
+
+    section h2 {
+      font-size: 2em;
+      border-bottom: 2px solid #007bff;
+      display: inline-block;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+    }
+
+    /* Quadro animado */
+    .quadro-animado {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      height: 300px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    }
+
+    .quadro-animado .slides {
+      display: flex;
+      width: 400%;
+      height: 100%;
+      animation: slide 40s infinite;
+    }
+
+    .quadro-animado .slide {
+      width: 100%;
+      flex-shrink: 0;
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .quadro-animado .slide h3 {
+      margin-bottom: 10px;
+      font-size: 1.8em;
+    }
+
+    .quadro-animado .slide p {
+      font-size: 1.2em;
+    }
+
+    /* Animação do slide */
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-100%); }
+      50% { transform: translateX(-200%); }
+      75% { transform: translateX(-300%); }
+      100% { transform: translateX(0); }
+    }
+
+    /* Rodapé */
+    footer {
+      text-align: center;
+      background-color: #111;
+      padding: 15px;
+      margin-top: 20px;
+      font-size: 0.9em;
+      color: #ccc;
+    }
+
+    footer a {
+      color: #007bff;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .menu {
+        width: 150px;
+      }
+
+      main {
+        margin-left: 170px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Menu lateral -->
+  <div class="menu">
+    <h2>Menu</h2>
+    <a href="#sobre">Sobre</a>
+    <a href="#destaques">Destaques</a>
+    <a href="#recomendacoes">Recomendações</a>
+    <a href="#contato">Contato</a>
+  </div>
+
+  <!-- Conteúdo principal -->
+  <main>
+    <header>
+      <h1>Vortex Project</h1>
+    </header>
+
+    <!-- Seção sobre -->
+    <section id="sobre">
+      <h2>Sobre Animes</h2>
+      <p>Os animes são histórias incríveis contadas em forma de animação japonesa. Com estilos únicos e uma base global de fãs, eles exploram temas como aventura, amizade, amor e mistérios em universos impressionantes.</p>
+    </section>
+
+    <!-- Quadro animado -->
+    <section id="destaques">
+      <h2>Destaques</h2>
+      <div class="quadro-animado">
+        <div class="slides">
+          <div class="slide" style="background-image: url('https://via.placeholder.com/800x300?text=Naruto');">
+            <h3>Naruto</h3>
+            <p>A jornada do jovem ninja em busca de reconhecimento e força.</p>
+          </div>
+          <div class="slide" style="background-image: url('https://via.placeholder.com/800x300?text=One+Piece');">
+            <h3>One Piece</h3>
+            <p>As aventuras épicas de Luffy em busca do lendário tesouro.</p>
+          </div>
+          <div class="slide" style="background-image: url('https://via.placeholder.com/800x300?text=Attack+on+Titan');">
+            <h3>Attack on Titan</h3>
+            <p>Uma luta desesperada pela sobrevivência contra os Titãs.</p>
+          </div>
+          <div class="slide" style="background-image: url('https://via.placeholder.com/800x300?text=Demon+Slayer');">
+            <h3>Demon Slayer</h3>
+            <p>Tanjiro enfrenta demônios para salvar sua irmã e proteger o mundo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+      <p>&copy; 2025 Vortex Project. Criado com paixão por fãs de anime. <a href="#">Voltar ao topo</a></p>
+    </footer>
+  </main>
+</body>
+</html>
